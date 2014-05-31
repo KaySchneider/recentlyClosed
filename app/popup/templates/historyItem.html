@@ -1,0 +1,6 @@
+<div ng-repeat="item in page.history" class="well">
+    <h2>{{item.title | limitTo:25}}</h2>
+    <b>{{item.lastVisitTime | date:'medium'}}</b>
+    <p>Visit count: {{item.visitCount}}</p>
+    <p><a target="_blank" href="{{item.url}}">{{item.url | limitTo:60}}</a></p>
+</div>

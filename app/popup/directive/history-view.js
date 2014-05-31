@@ -1,6 +1,8 @@
 (function() {
     var app = angular.module('historyViews', []);
+    
     app.directive('historyView', [ function() {
+
         return {
             restrict: 'E',
             templateUrl: '/app/popup/templates/historyItem.html',

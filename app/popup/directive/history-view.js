@@ -1,6 +1,6 @@
 (function() {
     var app = angular.module('historyViews', []);
-    
+
     app.directive('historyView', [ function() {
 
         return {

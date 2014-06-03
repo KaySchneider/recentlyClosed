@@ -1,6 +1,21 @@
-<div ng-repeat="item in page.history" class="well">
-    <h2>{{item.title | limitTo:25}}</h2>
-    <b>{{item.lastVisitTime | date:'medium'}}</b>
-    <p>Visit count: {{item.visitCount}}</p>
-    <p><a target="_blank" href="{{item.url}}">{{item.url | limitTo:60}}</a></p>
+<scroll-keyboard></scroll-keyboard>
+<div>
+    <form class="form-inline" role="form" ng-init="searchTerm=null">
+        <div class="form-group">
+            <input type="text" ng-model="searchTerm"
+                   class="form-control" placeholder="search"
+                   focus-me="true">
+        </div>
+    </form>
+</div>
+<div id="{{$index}}urlItem" scroller ihistory-open="{{item.url}}"
+     ng-init="data=[]"
+     ng-repeat="item in historyFiltered = (history | filter:searchTerm)"
+     ng-class="{active: activeIndex==$index }"
+     class="well pointer">
+        <base-url></base-url>
+        <h2>{{item.title | limitTo:25}}</h2>
+        <b>{{item.lastVisitTime | date:'medium'}}</b>
+        <p ng-show="item.visitCount">Visit count: {{item.visitCount}}</p>
+        <p><a >{{item.url | limitTo:60}}</a></p>
 </div>

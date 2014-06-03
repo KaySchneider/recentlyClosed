@@ -39,7 +39,7 @@ nosetests.xml
 # no settings
 settings.py
 
-
+package
 
 config/client_secret.json
 config/credentials.txt

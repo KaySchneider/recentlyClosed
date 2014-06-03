@@ -1,0 +1,10 @@
+.pointer {
+    cursor: pointer;
+}
+.well.active {
+    background-color: #428bca;
+}
+
+.well.active > h2, .well.active > p>a {
+    color:white
+}

@@ -40,7 +40,8 @@ nosetests.xml
 settings.py
 
 package
-
+npm-debug.log
+node_modules
 config/client_secret.json
 config/credentials.txt
 settings.py
